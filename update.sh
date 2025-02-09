@@ -66,7 +66,6 @@ update_feeds() {
         # 确保文件以换行符结尾
         [ -z "$(tail -c 1 "$BUILD_DIR/$FEEDS_CONF")" ] || echo "" >>"$BUILD_DIR/$FEEDS_CONF"
         echo "src-git small8 https://github.com/kenzok8/small-package" >>"$BUILD_DIR/$FEEDS_CONF"
-        echo "src-git mwan3help https://github.com/ps2zhuantou/luci-app-mwan3helper-chinaroute" >>"$BUILD_DIR/$FEEDS_CONF"
     fi
 
     # 添加bpf.mk解决更新报错
@@ -75,6 +74,7 @@ update_feeds() {
     fi
 
     # 更新 feeds
+    echo "src-git mwan3help https://github.com/ps2zhuantou/luci-app-mwan3helper-chinaroute" >>"$BUILD_DIR/$FEEDS_CONF"
     ./scripts/feeds clean
     ./scripts/feeds update -a
 }
