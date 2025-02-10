@@ -74,7 +74,6 @@ update_feeds() {
     fi
 
     # 更新 feeds
-    echo "src-git mwan3help https://github.com/ps2zhuantou/luci-app-mwan3helper-chinaroute" >>"$BUILD_DIR/$FEEDS_CONF"
     ./scripts/feeds clean
     ./scripts/feeds update -a
 }
