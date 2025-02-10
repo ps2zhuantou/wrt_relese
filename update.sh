@@ -65,7 +65,7 @@ update_feeds() {
     if ! grep -q "small-package" "$BUILD_DIR/$FEEDS_CONF"; then
         # 确保文件以换行符结尾
         [ -z "$(tail -c 1 "$BUILD_DIR/$FEEDS_CONF")" ] || echo "" >>"$BUILD_DIR/$FEEDS_CONF"
-        echo "src-git small8 https://github.com/kenzok8/small-package" >>"$BUILD_DIR/$FEEDS_CONF"
+        echo "src-git small8 https://github.com/ps2zhuantou/small-package" >>"$BUILD_DIR/$FEEDS_CONF"
     fi
 
     # 添加bpf.mk解决更新报错
@@ -132,7 +132,7 @@ install_small8() {
         adguardhome luci-app-adguardhome ddns-go luci-app-ddns-go taskd luci-lib-xterm luci-lib-taskd \
         luci-app-store quickstart luci-app-quickstart luci-app-istorex luci-app-cloudflarespeedtest \
         luci-theme-argon netdata luci-app-netdata lucky luci-app-lucky luci-app-openclash mihomo \
-        luci-app-mihomo luci-app-homeproxy luci-app-amlogic
+        luci-app-mihomo luci-app-homeproxy luci-app-amlogic luci-app-mwan3helper-chinaroute
 }
 
 install_feeds() {
